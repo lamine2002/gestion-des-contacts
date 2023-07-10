@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un contact</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ajouter un contact</h1>
+    <a href="/contacts">Retour</a>
+    <form method="POST" action="/contacts/add">
+        <label>Nom</label>
+        <input type="text" name="name" required>
+
+        <label>Adresse e-mail</label>
+        <input type="email" name="email" required>
+
+        <label>Numéro de téléphone</label>
+        <input type="text" name="phone_number" required>
+
+        <input type="submit" value="Ajouter">
+    </form>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
